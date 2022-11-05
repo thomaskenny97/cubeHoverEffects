@@ -61,6 +61,7 @@ body
     background: #dcdcdc;
     z-index: calc(1 * var(--i));
     transition: 1.5s;
+    transform: translate(500px);
 }
 
 .container .cube div span:hover {
@@ -78,7 +79,8 @@ body
     background: #fff;
     transform-origin: right;
     transform: skewY(45deg);
-    transition: 1.5s
+    transition: 1.5s;
+    transform: translate(-1000px);
 }
 
 .container .cube div span:hover::before {
@@ -96,10 +98,11 @@ body
     background: #f2f2f2;
     transform-origin: bottom;
     transform: skewX(45deg);
-    transition: 1.5s
+    transition: 1.5s;
 }
 
 .container .cube div span:hover::after {
     transition: 0s;
     background: #f14e55;
+    transform: translate(-500px, -500px);
 }
