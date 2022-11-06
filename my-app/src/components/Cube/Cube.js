@@ -6,12 +6,22 @@ import './Cube.css';
 function Cube() {
 
   const cubeStyle = "--i:3"
+  
+
+  function moveCubeOnClick (e) {
+    console.log(e);
+    const element = document.getElementById('img')
+
+    element.classList.remove('classname'); // reset animation
+    void element.offsetWidth; // trigger reflow
+    element.classList.add('classname'); // start animation
+  }
 
   return (
     <div className='container'>
       <div className='cube'>
         <div style={{'--x': -1, '--y':0}}>
-          <span style={{'--i': 3}}></span>
+          <span onClick={(e) => moveCubeOnClick(e)} style={{'--i': 3}}></span>
           <span style={{'--i': 2}}></span>
           <span style={{'--i': 1}}></span>
         </div>
